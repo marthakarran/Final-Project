@@ -1,0 +1,17 @@
+corr = data_df5.drop(['Patient ID'], axis=1).corr()
+
+plt.figure(figsize=(20,8))
+sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, cmap=sns.color_palette('RdBu_r'), 
+            annot=True)
+
+plt.show()
+
+# Two goals:
+# Create a model that will predict COVID19 test result using the blood test results
+# Create a model that will predict severity based on admission type
+
+# Dependent Variable - COVID19 
+
+# Limitations - Demographic information not available, only age quantile
+# Remember to save the model 
+
